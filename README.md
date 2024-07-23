@@ -17,6 +17,9 @@ This automation is intended to serve as the basis for an automation project in c
 ### Folder structure
 
 ```
+.github/
+  workflows/
+    ci.yml
 cypress/
   integration/
     actor/
@@ -48,6 +51,9 @@ generate-reports.js
 * [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
 * [Node.js](https://nodejs.org/es/docs/)
 
+## Continuos Integrations in GitHub Actions
+
+The ci.yml file contains a basic integration of the case execution in GitHub Actions which is executed each time a push to the main branch or a pull request to the main branch is main. 
 
 ## In the VSCode terminal
 
