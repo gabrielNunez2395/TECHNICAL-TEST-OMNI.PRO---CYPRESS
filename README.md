@@ -12,7 +12,7 @@ This automation is intended to serve as the basis for an automation project in c
 
 #### Note
 * The last three cases were performed with the ScreenPlay test design pattern.
-* As a final deliverable an html report is created
+* As a final deliverable an html report is created.
 
 ### Folder structure
 
