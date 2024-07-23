@@ -5,10 +5,10 @@ This automation is intended to serve as the basis for an automation project in c
 
 ### Cases
 
-1. Validating the category section, selecting the Laptops category.
-2. Adding a product to the cart.
-3. Searching for a product from the search input.
-4. Validate the title of the page.
+- Validating the category section, selecting the Laptops category.
+- Adding a product to the cart.
+- Searching for a product from the search input.
+- Validate the title of the page.
 
 * The last three cases were performed with the ScreenPlay test design pattern.
 * As a final deliverable an html report is created
