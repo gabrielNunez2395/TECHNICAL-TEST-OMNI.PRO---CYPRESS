@@ -10,6 +10,7 @@ This automation is intended to serve as the basis for an automation project in c
 - Searching for a product from the search input.
 - Validate the title of the page.
 
+#### Note
 * The last three cases were performed with the ScreenPlay test design pattern.
 * As a final deliverable an html report is created
 
