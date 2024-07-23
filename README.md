@@ -15,6 +15,7 @@ This automation is intended to serve as the basis for an automation project in c
 
 ### Folder structure
 
+```
 cypress/
   integration/
     actor/
@@ -39,6 +40,7 @@ cypress/
 mochawesome-report/
    (here the consolidated HTML report will be generated)
 generate-reports.js
+```
 
 ## ✅ Technologies
 ### This project required:
@@ -53,7 +55,7 @@ generate-reports.js
 ```
 - Open a terminal in VSCode
 - Go to the folder where you want to save the project, Example cd Documents/Pruebas/...
-- git clone 
+- git clone https://github.com/gabrielNunez2395/TECHNICAL-TEST-OMNI.PRO---CYPRESS.git
 - cd cypress-project
 - npm install
 ```
