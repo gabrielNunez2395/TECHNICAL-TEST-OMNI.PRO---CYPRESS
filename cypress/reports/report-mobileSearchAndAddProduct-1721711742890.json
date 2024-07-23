@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-23T05:15:20.560Z",
+    "end": "2024-07-23T05:15:30.984Z",
+    "duration": 10424,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "608bb666-b6fb-4848-ae55-1d47f6e04fdb",
+      "title": "",
+      "fullFile": "cypress/integrations/tests/mobileSearchAndAddProduct.spec.js",
+      "file": "cypress/integrations/tests/mobileSearchAndAddProduct.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e2ff17da-93e4-4c5b-b8a1-930a5576cad9",
+          "title": "Search and add products to the cart on mobile",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a product and add it to the cart",
+              "fullTitle": "Search and add products to the cart on mobile should search for a product and add it to the cart",
+              "timedOut": null,
+              "duration": 10379,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(user).as('actor').then(() => {\n  new _MobileSearchForProduct.default('Laptop').performAs(user);\n  new _MobileAddProductToCart.default().performAs(user);\n  _PageTitle.default.verifyContains('Advantage Shopping');\n  _MobileCartContent.default.verifyItemInCart();\n});",
+              "err": {},
+              "uuid": "a6c0b1d0-ee73-4fbf-9ead-9c10c633e694",
+              "parentUUID": "e2ff17da-93e4-4c5b-b8a1-930a5576cad9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a6c0b1d0-ee73-4fbf-9ead-9c10c633e694"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportFilename": "report-[name]"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

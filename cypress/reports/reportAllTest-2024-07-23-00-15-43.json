@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-07-23T05:15:04.914Z",
+    "end": "2024-07-23T05:15:42.873Z",
+    "duration": 37959
+  },
+  "results": [
+    {
+      "uuid": "29fce72b-6998-42cb-8193-5ab90a8825c0",
+      "title": "",
+      "fullFile": "cypress/integrations/tests/addLaptopToCart.spec.js",
+      "file": "cypress/integrations/tests/addLaptopToCart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cb838568-fd97-4eea-9c76-6a96569ec7fe",
+          "title": "Add product to cart on the website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should select the category Laptops, choose HP CHROMEBOOK 14 G1(ES), and add it to the cart",
+              "fullTitle": "Add product to cart on the website should select the category Laptops, choose HP CHROMEBOOK 14 G1(ES), and add it to the cart",
+              "timedOut": null,
+              "duration": 14708,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Visitar la página de inicio\ncy.visit('/');\n// Seleccionar la categoría \"Laptops\" en la sección \"OUR PRODUCTS\"\ncy.get('#laptopsImg', {\n  timeout: 10000\n}).should('be.visible').click(); // Ajusta el selector según el HTML de tu página\n// Esperar a que la página de productos se cargue\ncy.url().should('include', '/Laptops/1');\n// Seleccionar el producto \"HP CHROMEBOOK 14 G1(ES)\"\ncy.get('#10').click(); // Ajusta el texto según el HTML de tu página\n// Esperar a que la página del producto se cargue\ncy.url().should('include', '/product/');\n// Agregar el producto al carrito\ncy.get('#productProperties .roboto-medium').contains('ADD TO CART').click(); // Ajusta el selector según el HTML de tu página\n// Verificar que el producto ha sido agregado al carrito\ncy.get('#shoppingCartLink').click();\ncy.url().should('include', '/shoppingCart');\ncy.contains('HP CHROMEBOOK 14 G1(ES)').should('exist'); // Verifica que el producto está en el carrito",
+              "err": {},
+              "uuid": "b7c1b9c7-4d61-4ad1-8cfb-44ac7953ca06",
+              "parentUUID": "cb838568-fd97-4eea-9c76-6a96569ec7fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b7c1b9c7-4d61-4ad1-8cfb-44ac7953ca06"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14708,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "608bb666-b6fb-4848-ae55-1d47f6e04fdb",
+      "title": "",
+      "fullFile": "cypress/integrations/tests/mobileSearchAndAddProduct.spec.js",
+      "file": "cypress/integrations/tests/mobileSearchAndAddProduct.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e2ff17da-93e4-4c5b-b8a1-930a5576cad9",
+          "title": "Search and add products to the cart on mobile",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a product and add it to the cart",
+              "fullTitle": "Search and add products to the cart on mobile should search for a product and add it to the cart",
+              "timedOut": null,
+              "duration": 10379,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(user).as('actor').then(() => {\n  new _MobileSearchForProduct.default('Laptop').performAs(user);\n  new _MobileAddProductToCart.default().performAs(user);\n  _PageTitle.default.verifyContains('Advantage Shopping');\n  _MobileCartContent.default.verifyItemInCart();\n});",
+              "err": {},
+              "uuid": "a6c0b1d0-ee73-4fbf-9ead-9c10c633e694",
+              "parentUUID": "e2ff17da-93e4-4c5b-b8a1-930a5576cad9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a6c0b1d0-ee73-4fbf-9ead-9c10c633e694"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ad10bc2c-2c0e-4bdc-9e13-718c5c677153",
+      "title": "",
+      "fullFile": "cypress/integrations/tests/webSearchAndAddProduct.spec.js",
+      "file": "cypress/integrations/tests/webSearchAndAddProduct.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c3de63f3-895e-43d4-b273-0fa7c9da9929",
+          "title": "Search and add products to cart on the website",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a product and add it to the cart",
+              "fullTitle": "Search and add products to cart on the website should search for a product and add it to the cart",
+              "timedOut": null,
+              "duration": 10969,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wrap(user).as('actor').then(() => {\n  new _WebSearchForProduct.default('Laptop').performAs(user);\n  new _WebAddProductToCart.default().performAs(user);\n  _PageTitle.default.verifyContains('Advantage Shopping');\n  _WebCartContent.default.verifyItemInCart();\n});",
+              "err": {},
+              "uuid": "ce9ff628-50e4-488d-9002-8af6b13d00b7",
+              "parentUUID": "c3de63f3-895e-43d4-b273-0fa7c9da9929",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce9ff628-50e4-488d-9002-8af6b13d00b7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10969,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report-[name]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportFilename": "report-[name]"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
